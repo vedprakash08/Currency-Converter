@@ -192,7 +192,7 @@ async function getConverted(){
         // console.log(data);
 
         const conversionRate = data.rates[toCurr];
-        const convertedAmo = amount*conversionRate;
+        const convertedAmo = (amount*conversionRate).toFixed(2);
         if(typeof conversionRate==='undefined'){
             conversionRate.value="";
             result.innerHTML=`<h2>Exchange rate is not available!!!</h2>`;
